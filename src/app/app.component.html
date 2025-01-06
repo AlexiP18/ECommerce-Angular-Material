@@ -1,0 +1,37 @@
+<div *ngIf="!isCustomerLoggedIn && !isAdminLoggedIn">
+    <mat-toolbar color="primary" class="navbar">
+        <span class="navbar-brand">CompuMaster</span>
+        <span class="spacer"></span>
+        <button mat-button routerLink="/order" routerLinkActive="active">Ruta Orden</button>
+        <button mat-button routerLink="/register" routerLinkActive="active">Registro</button>
+        <button mat-button routerLink="/login" routerLinkActive="active">Login</button>
+    </mat-toolbar>
+</div>
+<div *ngIf="isAdminLoggedIn">
+    <mat-toolbar color="primary" class="navbar">
+        <span class="navbar-brand">CompuMaster</span>
+        <span class="spacer"></span>
+        <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">Menú</button>
+        <button mat-button routerLink="/admin/analytics" routerLinkActive="active">Estadísticas</button>
+        <button mat-button routerLink="/admin/category" routerLinkActive="active">Categoría</button>
+        <button mat-button routerLink="/admin/product" routerLinkActive="active">Producto</button>
+        <button mat-button routerLink="/admin/orders" routerLinkActive="active">Ordenes</button>
+        <button mat-button routerLink="/admin/post-coupon" routerLinkActive="active">Añadir Cupon</button>
+        <button mat-button routerLink="/admin/coupons" routerLinkActive="active">Cupones</button>
+        <button mat-button routerLinkActive="active" (click)="logout()">Cerrar Sesión</button>
+
+    </mat-toolbar>
+</div>
+<div *ngIf="isCustomerLoggedIn">
+    <mat-toolbar color="primary" class="navbar">
+        <span class="navbar-brand">CompuMaster</span>
+        <span class="spacer"></span>
+        <button mat-button routerLink="/customer/dashboard" routerLinkActive="active">Menu</button>
+        <button mat-button routerLink="/customer/cart" routerLinkActive="active">Carrito</button>
+        <button mat-button routerLink="/customer/my_orders" routerLinkActive="active">Ordenes</button>
+        <button mat-button routerLink="/customer/wishlist" routerLinkActive="active">Lista de Deseos</button>
+        <button mat-button routerLink="/customer/profile" routerLinkActive="active">Perfil</button>
+        <button mat-button routerLinkActive="active" (click)="logout()">Cerrar Sesión</button>
+    </mat-toolbar>
+</div>
+<router-outlet></router-outlet>
