@@ -2,9 +2,11 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const runtimeBasicUrl = (window as any).__env?.BASIC_URL || 'http://localhost:8080/';
+
 export const environment = {
   production: false,
-  BASIC_URL: "http://localhost:8080/"
+  BASIC_URL: runtimeBasicUrl.endsWith('/') ? runtimeBasicUrl : `${runtimeBasicUrl}/`
 };
 
 /*

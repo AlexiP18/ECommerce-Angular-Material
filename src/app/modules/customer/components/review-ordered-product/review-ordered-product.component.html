@@ -30,7 +30,7 @@
 
     <mat-form-field appearance="outline">
         <mat-label>Descripción</mat-label>
-        <textarea matInput formControlName="description" placeholder="Description" rows="5"></textarea>
+        <textarea matInput formControlName="description" placeholder="Descripción" rows="5"></textarea>
         <mat-error *ngIf="reviewForm.get('description').invalid && reviewForm.get('description').touched">
           Este campo es requerido!
         </mat-error>

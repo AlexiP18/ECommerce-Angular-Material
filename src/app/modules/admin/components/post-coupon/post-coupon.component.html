@@ -5,25 +5,25 @@
 
         <mat-form-field appearance="outline" class="form-field">
             <mat-label>Nombre</mat-label>
-            <input matInput type="text" placeholder="Name" formControlName="name" />
+            <input matInput type="text" placeholder="Nombre" formControlName="name" />
             <mat-error *ngIf="categoryForm.get('name')?.hasError('required')">Este campo es requerido!</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="form-field">
             <mat-label>Codigo</mat-label>
-            <input matInput type="text" placeholder="Code" formControlName="code" />
+            <input matInput type="text" placeholder="Código" formControlName="code" />
             <mat-error *ngIf="categoryForm.get('code')?.hasError('required')">Este campo es requerido!</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="form-field">
             <mat-label>Descuento %</mat-label>
-            <input matInput type="number" placeholder="Discount" formControlName="discount" />
+            <input matInput type="number" placeholder="Descuento" formControlName="discount" />
             <mat-error *ngIf="categoryForm.get('discount')?.hasError('required')">Este campo es requerido!</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="form-field">
             <mat-label>Fecha Expiración</mat-label>
-            <!-- <input matInput type="date" placeholder="Expiration Date" formControlName="expirationDate" /> -->
+            <!-- <input matInput type="date" placeholder="Fecha de expiración" formControlName="expirationDate" /> -->
                 <input matInput [matDatepicker]="picker" formControlName="expirationDate">
                 <mat-hint>MM/DD/YYYY</mat-hint>
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>

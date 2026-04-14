@@ -6,7 +6,7 @@
 
                 <mat-form-field appearance="outline">
                     <mat-label>Dirección:</mat-label>
-                    <input matInput formControlName="address" placeholder="Address" required>
+                    <input matInput formControlName="address" placeholder="Dirección" required>
                     <mat-error *ngIf="orderForm.get('address').invalid && orderForm.get('address').touched">
                         Este campo es requerido!
                     </mat-error>
@@ -14,7 +14,7 @@
 
                 <mat-form-field appearance="outline">
                     <mat-label>Descripción</mat-label>
-                    <input matInput formControlName="orderDescription" placeholder="Description">
+                    <input matInput formControlName="orderDescription" placeholder="Descripción">
                 </mat-form-field>
 
 
